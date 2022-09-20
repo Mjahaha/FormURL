@@ -1,0 +1,11 @@
+html {
+    background-color: black;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    align-content: center;
+}
