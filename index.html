@@ -12,11 +12,11 @@
         <form>
             <h1>Form input</h1>
             <label for="number">Enter Number</label>
-            <input type="text" name="number" id="number" value=number>
+            <input type="text" name="number" id="number" value="">
         </form>
     </div>
     <div class="send">
-        <form action="" id="button"> <!--action="https://google.com"--> 
+        <form id="button"> <!--action="https://google.com"--> 
             <input type="submit" value="Send number" />
         </form>
         <p id="output"></p>
@@ -33,18 +33,12 @@
         let number = document.getElementById('number').value;
         let url = "afterpage.html?number=".concat(number);
         //button.innerHTML = url;
-        button.setAttribute("action",url);
+        window.location.href = "file:///C:/Users/sleep/Code/FormURL/afterpage.html?number=".concat(number);
+        //button.setAttribute("action",url);
     }
 
-    button.onclick = changeurl;
+    button.onclick = window.location.href = "file:///C:/Users/sleep/Code/FormURL/afterpage.html?number=1";;
+    
 
-</script>
-
-<script>
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const product = urlParams.get('number')
-    //document.querySelector('p').innerHTML = urlParams.get('number');
-    document.querySelector('input').setAttribute("value", urlParams.get('number'));
 </script>
 </html>
