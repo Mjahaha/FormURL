@@ -12,3 +12,7 @@ html {
     width: 100%;
     height: auto;
 }
+
+.send {
+    margin: 20px;
+}
