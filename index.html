@@ -16,9 +16,10 @@
         </form>
     </div>
     <div class="send">
-        <form action="https://google.com" id="button">
-            <input type="submit" value="Go to Google" />
+        <form action="" id="button"> <!--action="https://google.com"--> 
+            <input type="submit" value="Send number" />
         </form>
+        <p id="output"></p>
     </div>
     <p></p>
 </body>
@@ -26,9 +27,13 @@
 <script>
     
 
-    function changeurl(){
+    function changeurl() {
         let button = document.getElementById('button'); 
-        button.innerHTML = "YMCA";
+        let output = document.getElementById('output');
+        let number = document.getElementById('number').value;
+        let url = "afterpage.html?number=".concat(number);
+        //button.innerHTML = url;
+        button.setAttribute("action",url);
     }
 
     button.onclick = changeurl;
